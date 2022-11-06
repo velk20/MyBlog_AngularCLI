@@ -1,0 +1,11 @@
+<p *ngIf="selectedPost">
+  Your favorite wonder is {{selectedPost.title}}
+</p>
+
+<div class="row">
+  <div class="col-md-4" *ngFor="let post of posts">
+    <app-card-item [post]="post"
+                   (postSelected)="onPostSelected($event)"
+                   (postDeleted)="postDeleted.emit($event)"></app-card-item>
+  </div>
+</div>

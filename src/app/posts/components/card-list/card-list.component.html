@@ -1,0 +1,8 @@
+<h1 class="text-center text-success mt-4 mb-4">New Seven Wonders</h1>
+
+<div class="mb-3">
+  <a routerLink="/main/new-wonders/create" class="btn btn-outline-primary">Create new</a>
+</div>
+
+<app-card-list-view [posts]="posts"
+                    (postDeleted)="onPostDelete($event)"></app-card-list-view>

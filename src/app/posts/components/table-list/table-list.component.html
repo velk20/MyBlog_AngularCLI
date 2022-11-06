@@ -1,0 +1,8 @@
+<h1 class="text-center text-primary mt-4 mb-4">Ancient Wonders of the World</h1>
+
+<div class="mb-3">
+  <a routerLink="/main/ancient-wonders/create" class="btn btn-outline-primary">Create New</a>
+</div>
+
+<app-table-view [posts]="posts"
+                (postDeleted)="onPostDelete($event)"></app-table-view>

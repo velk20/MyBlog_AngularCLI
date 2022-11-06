@@ -1,0 +1,40 @@
+<h3>
+  {{!post.id ? 'Create new' : 'Update'}}
+</h3>
+
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text"
+           class="form-control"
+           id="title"
+           formControlName="title"
+           placeholder="Enter title...">
+
+    <app-field-error-message [control]="formGroup.get('title')"></app-field-error-message>
+
+  </div>
+
+  <div class="form-group">
+    <label for="content">Content</label>
+    <input type="text"
+           class="form-control"
+           id="content"
+           formControlName="content"
+           placeholder="Enter content...">
+
+    <app-field-error-message [control]="formGroup.get('content')"></app-field-error-message>
+
+  </div>
+
+  <div class="form-group">
+    <button type="submit"
+            class="btn btn-outline-dark"
+            [disabled]="formGroup.invalid">
+      {{!post.id ? 'Add' : 'Update'}}
+    </button>
+
+    <a routerLink="/main/new-wonders"
+       class="btn btn-default">Cancel</a>
+  </div>
+</form>
