@@ -5,6 +5,7 @@ import { TableListComponent } from './components/table-list/table-list.component
 import { PostTdFormComponent } from './components/post-forms/post-td-form/post-td-form.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 import { PostReactiveFormComponent } from './components/post-forms/post-reactive-form/post-reactive-form.component';
+import {HomeComponent} from './components/home/home.component';
 
 const routes: Route[] = [
   {
@@ -12,27 +13,35 @@ const routes: Route[] = [
     component: MainComponent,
     children: [
       {
-        path: 'ancient-wonders',
+        path: '',
+        component: HomeComponent
+      },
+      {
+        path: 'home',
+        component: HomeComponent
+      },
+      {
+        path: 'my-posts',
         component: TableListComponent
       },
       {
-        path: 'ancient-wonders/create',
+        path: 'my-posts/create',
         component: PostTdFormComponent
       },
       {
-        path: 'ancient-wonders/edit/:id',
+        path: 'my-posts/edit/:id',
         component: PostTdFormComponent
       },
       {
-        path: 'new-wonders',
+        path: 'all-posts',
         component: CardListComponent
       },
       {
-        path: 'new-wonders/create',
+        path: 'all-posts/create',
         component: PostReactiveFormComponent
       },
       {
-        path: 'new-wonders/edit/:id',
+        path: 'all-posts/edit/:id',
         component: PostReactiveFormComponent
       }
     ]

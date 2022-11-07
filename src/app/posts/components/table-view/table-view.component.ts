@@ -1,5 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Post} from '../../post.interface';
+import {AuthService} from '../../../auth/auth.service';
+import {User} from '../../../auth/user.model';
 
 @Component({
   selector: 'app-table-view',
@@ -12,6 +14,12 @@ export class TableViewComponent {
 
   @Output() postDeleted = new EventEmitter<number>();
 
-  constructor() {
+  constructor(private authService: AuthService) {
   }
+
+
+  getLoggedUser(): User {
+    return this.authService.getLoggedUser();
+  }
+
 }

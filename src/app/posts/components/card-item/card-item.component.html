@@ -1,9 +1,11 @@
 <div class="card mb-4">
   <div class="card-body">
     <h5 class="card-title">{{post.title}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{post.publishDate}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">
+      {{post.publishDate}}, {{post.category}}
+    </h6>
 
-    <p class="card-text">{{post.content}}</p>
+    <p class="card-text">{{post.content.substring(0,150)}}</p>
 
     <button type="button"
             class="btn btn-outline-primary mr-2"
@@ -11,12 +13,12 @@
       Mark as Favorite
     </button>
 
-    <a class="btn btn-outline-success mr-2"
-       [routerLink]="['/main', 'new-wonders', 'edit', post.id]">
+    <a *ngIf="post.authorId === getLoggedUser().id" class="btn btn-outline-success mr-2"
+       [routerLink]="['/main', 'all-posts', 'edit', post.id]">
       Edit
     </a>
 
-    <button type="button"
+    <button *ngIf="post.authorId === getLoggedUser().id" type="button"
             class="btn btn-outline-danger"
             (click)="postDeleted.emit(post.id)">
       Delete

@@ -2,9 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Steps to reproduce
+Run `npm i` for node modules installation. </br>
+Run `npm i -g json-server` for local json-server used as DB. </br>
+Run `ng serve` for a dev server.</br>
+Run `json-server --watch src/api/api.json` for the fake server to watch for new requests.</br>
+Navigate to `http://localhost:4200/`. </br>
+The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

@@ -1,5 +1,9 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
-import { Post } from '../../post.interface';
+import {Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Post} from '../../post.interface';
+import {AuthService} from '../../../auth/auth.service';
+import {User} from '../../../auth/user.model';
+import {Subject} from 'rxjs';
+import {take, takeUntil} from 'rxjs/operators';
 
 @Component({
   selector: 'app-card-item',
@@ -13,12 +17,10 @@ export class CardItemComponent implements OnInit, OnChanges {
   @Output() postSelected = new EventEmitter<Post>();
   @Output() postDeleted = new EventEmitter<number>();
 
-  constructor() {
-    console.log('constructor');
+  constructor(private authService: AuthService) {
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit');
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -30,4 +32,10 @@ export class CardItemComponent implements OnInit, OnChanges {
   markAsFavorite(): void {
     this.postSelected.emit(this.post);
   }
+
+  getLoggedUser(): User {
+    return this.authService.getLoggedUser();
+  }
+
+
 }

@@ -1,8 +1,9 @@
 <table class="table table-striped">
   <thead>
   <tr>
-    <th scope="col">#</th>
+    <th scope="col">№Id</th>
     <th scope="col">Title</th>
+    <th scope="col">Category</th>
     <th scope="col">Author</th>
     <th scope="col">Publish Date</th>
     <th scope="col">Actions</th>
@@ -13,12 +14,13 @@
   <tr *ngFor="let post of posts">
     <td>{{post.id}}</td>
     <td>{{post.title}}</td>
-    <td>{{post.author}}</td>
+    <td>{{post.category}}</td>
+    <td>{{getLoggedUser().username}}</td>
     <td>{{post.publishDate}}</td>
     <td>
 
       <a class="btn btn-link"
-         [routerLink]="['/main', 'ancient-wonders', 'edit', post.id]">
+         [routerLink]="['/main', 'my-posts', 'edit', post.id]">
         Edit
       </a>
 

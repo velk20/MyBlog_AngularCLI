@@ -3,6 +3,8 @@ import {Post} from '../../post.interface';
 import {PostsService} from '../../posts.service';
 import {Subject} from 'rxjs';
 import {map, takeUntil} from 'rxjs/operators';
+import {User} from '../../../auth/user.model';
+import {AuthService} from '../../../auth/auth.service';
 
 @Component({
   selector: 'app-card-list',
@@ -15,7 +17,8 @@ export class CardListComponent implements OnInit {
 
   destroy$ = new Subject<boolean>();
 
-  constructor(private postsService: PostsService) {
+  constructor(private postsService: PostsService,
+              private authService: AuthService) {
   }
 
   ngOnInit(): void {
@@ -35,7 +38,7 @@ export class CardListComponent implements OnInit {
   private getContent(): void {
     this.postsService.getPosts().pipe(
       map((stream) => {
-        return stream.filter(x => x.category === 'modern');
+        return stream;
       }),
       takeUntil(this.destroy$)
     ).subscribe((response) => {
@@ -43,5 +46,9 @@ export class CardListComponent implements OnInit {
     }, (error) => {
       console.log(error);
     });
+  }
+
+  getLoggedUser(): User {
+    return this.authService.getLoggedUser();
   }
 }

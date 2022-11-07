@@ -5,6 +5,7 @@ import { take, takeUntil } from 'rxjs/operators';
 import { PostsService } from '../../../posts.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
+import {formatDate} from '@angular/common';
 
 @Component({
   selector: 'app-post-td-form',
@@ -27,7 +28,6 @@ export class PostTdFormComponent implements OnInit {
     this.post = {
       title: '',
       category: '',
-      author: '',
       content: '',
       publishDate: ''
     };
@@ -53,15 +53,14 @@ export class PostTdFormComponent implements OnInit {
       // create
       const newPost = {
         ...this.post,
-        author: 'Z. Strahinova',
-        publishDate: 'Oct 30, 2020',
-        category: 'ancient'
+        authorId: JSON.parse(localStorage.getItem('loggedUser')).id,
+        publishDate: formatDate(new Date(), 'yyyy-MM-dd', 'en-US').toString(),
       };
 
       this.postsService.createPost(newPost).pipe(
         take(1)
       ).subscribe(() => {
-        this.router.navigate(['/main/ancient-wonders']);
+        this.router.navigate(['/main/my-posts']);
       }, (error) => {
         console.log(error);
       });
@@ -73,14 +72,14 @@ export class PostTdFormComponent implements OnInit {
     this.postsService.updatePost(this.post).pipe(
       takeUntil(this.destroy$)
     ).subscribe(() => {
-      this.router.navigate(['/main/ancient-wonders']);
+      this.router.navigate(['/main/my-posts']);
     }, (error) => {
       console.log(error);
     });
   }
 
   onCancel(): void {
-    this.router.navigate(['/main/ancient-wonders']);
+    this.router.navigate(['/main/my-posts']);
   }
 
   private getPost(id: number): void {

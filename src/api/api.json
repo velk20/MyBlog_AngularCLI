@@ -12,6 +12,13 @@
       "password": "angel2001",
       "rePassword": "angel2001",
       "id": 2
+    },
+    {
+      "name": "Toni Bonboni",
+      "username": "toni",
+      "password": "123456",
+      "rePassword": "123456",
+      "id": 3
     }
   ],
   "posts": [
@@ -20,112 +27,133 @@
       "title": "Great Pyramid of Giza, Egypt",
       "content": "The Great Pyramid, located at Giza on the west bank of the Nile River north of Cairo in Egypt, is the only wonder of the ancient world that has survived to the present day. It is part of a group of three pyramids–Khufu (Cheops), Khafra (Chephren) and Menkaura (Mycerimus)–that were built between 2700 B.C. and 2500 B.C. as royal tombs.",
       "author": "Nick Brundle",
-      "publishDate": "AUG 16, 2019",
-      "category": "ancient"
+      "publishDate": "2022-11-07",
+      "category": "History",
+      "authorId": 1
     },
     {
       "id": 2,
       "title": "Hanging Gardens of Babylon",
       "content": "According to ancient Greek poets, the Hanging Gardens of Babylon were built near the Euphrates River in modern-day Iraq by the Babylonian king Nebuchadnezzar II around 600 B.C. The gardens were said to have been planted as high as 75 feet in the air on a huge square brick terrace that was laid out in steps like a theater.",
       "author": "Nick Brundle",
-      "publishDate": "AUG 16, 2019",
-      "category": "ancient"
+      "publishDate": "2022-11-07",
+      "category": "History",
+      "authorId": 3
     },
     {
       "id": 3,
       "title": "Statue of Zeus at Olympia",
       "content": "The famed statue of Zeus, the king of the gods in Greek Mythology, was crafted by the Athenian sculptor Phidias and completed and placed in the temple of Zeus at Olympia, site of the ancient Olympics, around the mid-fifth century B.C. The statue depicted the god of thunder seated bare-chested at a wooden throne.",
       "author": "Hulton Getty",
-      "publishDate": "AUG 16, 2019",
-      "category": "ancient"
+      "publishDate": "2022-11-07",
+      "category": "History",
+      "authorId": 1
     },
     {
       "id": 4,
       "title": "Temple of Artemis at Ephesus",
       "content": "There was actually more than one Temple of Artemis: A series of several altars and temples was destroyed and then restored on the same site in Ephesus, a Greek port city on the west coast of modern-day Turkey. The most fabulous of these structures were two marble temples built around 550 B.C. and 350 B.C., respectively.",
       "author": "Hulton Getty",
-      "publishDate": "AUG 16, 2019",
-      "category": "ancient"
+      "publishDate": "2022-11-07",
+      "category": "History",
+      "authorId": 2
     },
     {
       "id": 5,
       "title": "Mausoleum at Halicarnassus",
       "content": "Located in what is now southeastern Turkey, the Mausoleum at Halicarnassus was a tomb built by Artemisia for her husband, Mausolus, the king of Carnia in Asia Minor, after his death in 353 B.C. Mausolus was also Artemisia’s brother, and, according to legend, she was so grief-stricken at his passing that she mixed his ashes with water and drank them in addition to ordering the mausoleum’s construction.",
       "author": "Hulton Getty",
-      "publishDate": "AUG 16, 2019",
-      "category": "ancient"
+      "publishDate": "2022-11-07",
+      "category": "History",
+      "authorId": 3
     },
     {
       "id": 6,
       "title": "Colossus of Rhodes",
       "content": "The Colossus of Rhodes was an enormous bronze sculpture of the sun god Helios built by the Rhodians over 12 years in the third century B.C. The city was the target of a Macedonian siege early in the fourth century B.C. and, according to legend, the Rhodians sold the tools and equipment left behind by the Macedonians to pay for the Colossus.",
       "author": "Nick Brundle",
-      "publishDate": "AUG 16, 2019",
-      "category": "ancient"
+      "publishDate": "2022-11-07",
+      "category": "History",
+      "authorId": 3
     },
     {
       "id": 7,
       "title": "Lighthouse of Alexandria",
       "content": "The Lighthouse of Alexandria was located on a small island called Pharos near the city of Alexandria. Designed by the Greek architect Sostratos and completed around 270 B.C. during the reign of Ptolemy II, the lighthouse helped to guide Nile River ships in and out of the city’s busy harbor.",
       "author": "Nick Brundle",
-      "publishDate": "AUG 16, 2019",
-      "category": "ancient"
+      "publishDate": "2022-11-07",
+      "category": "History"
     },
     {
       "id": 8,
       "title": "Great Wall of China",
       "content": "Great might be an understatement. One of the world’s largest building-construction projects, the Great Wall of China is widely thought to be about 5,500 miles (8,850 km) long; a disputed Chinese study, however, claims the length is 13,170 miles (21,200 km). Work began in the 7th century BCE and continued for two millennia. ",
       "author": "Amy Tikkanen",
-      "publishDate": "Nov 01, 2019",
-      "category": "modern"
+      "publishDate": "2022-11-07",
+      "category": "History",
+      "authorId": 3
     },
     {
       "id": 9,
       "title": "Chichén Itzá",
       "content": "Chichén Itzá is a Mayan city on the Yucatán Peninsula in Mexico, which flourished in the 9th and 10th centuries CE. Under the Mayan tribe Itzá—who were strongly influenced by the Toltecs—a number of important monuments and temples were built. Among the most notable is the stepped pyramid El Castillo (“The Castle”), which rises 79 feet (24 meters) above the Main Plaza.",
       "author": "Amy Tikkanen",
-      "publishDate": "Nov 01, 2019",
-      "category": "modern"
+      "publishDate": "2022-11-07",
+      "category": "History",
+      "authorId": 3
     },
     {
       "id": 10,
       "title": "Petra",
       "content": "The ancient city of Petra, Jordan, is located in a remote valley, nestled among sandstone mountains and cliffs. It was purported to be one of the places where Moses struck a rock and water gushed forth. Later the Nabataeans, an Arab tribe, made it their capital, and during this time it flourished, becoming an important trade center, especially for spices.",
       "author": "Amy Tikkanen",
-      "publishDate": "Nov 01, 2019",
-      "category": "modern"
+      "publishDate": "2022-11-07",
+      "category": "History",
+      "authorId": 2
     },
     {
       "id": 11,
       "title": "Machu Picchu",
       "content": "This Incan site near Cuzco, Peru, was “discovered” in 1911 by Hiram Bingham, who believed it was Vilcabamba, a secret Incan stronghold used during the 16th-century rebellion against Spanish rule. Although that claim was later disproved, the purpose of Machu Picchu has confounded scholars. ",
       "author": "Amy Tikkanen",
-      "publishDate": "Nov 01, 2019",
-      "category": "modern"
+      "publishDate": "2022-11-07",
+      "category": "History",
+      "authorId": 2
     },
     {
       "id": 12,
       "title": "Christ the Redeemer",
       "content": "Christ the Redeemer, a colossal statue of Jesus, stands atop Mount Corcovado in Rio de Janeiro. Its origins date to just after World War I, when some Brazilians feared a “tide of godlessness.” They proposed a statue, which was ultimately designed by Heitor da Silva Costa, Carlos Oswald, and Paul Landowski.",
       "author": "Amy Tikkanen",
-      "publishDate": "Nov 01, 2019",
-      "category": "modern"
+      "publishDate": "2022-11-07",
+      "category": "History",
+      "authorId": 2
     },
     {
       "id": 13,
       "title": "Colosseum",
       "content": "The Colosseum in Rome was built in the first century by order of the Emperor Vespasian. A feat of engineering, the amphitheater measures 620 by 513 feet (189 by 156 meters) and features a complex system of vaults. It was capable of holding 50,000 spectators, who watched a variety of events.",
       "author": "Amy Tikkanen",
-      "publishDate": "Nov 01, 2019",
-      "category": "modern"
+      "publishDate": "2022-11-07",
+      "category": "History",
+      "authorId": 1
     },
     {
       "id": 14,
       "title": "Taj Mahal",
       "content": "This mausoleum complex in Agra, India, is regarded as one of the world’s most iconic monuments and is perhaps the finest example of Mughal architecture. It was built by Emperor Shah Jahān (reigned 1628–58) to honor his wife Mumtāz Maḥal (“Chosen One of the Palace”), who died in 1631 giving birth to their 14th child.",
       "author": "Amy Tikkanen",
-      "publishDate": "Nov 01, 2019",
-      "category": "modern"
+      "publishDate": "2022-11-07",
+      "category": "History",
+      "authorId": 1
+    },
+    {
+      "id": 15,
+      "title": "Harry Potter",
+      "content": "Harry poter is the best ever book written comma.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "authorId": 1,
+      "publishDate": "2022-11-07",
+      "category": "Movie"
     }
   ]
 }

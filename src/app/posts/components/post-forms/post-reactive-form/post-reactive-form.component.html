@@ -28,13 +28,25 @@
   </div>
 
   <div class="form-group">
+    <label for="content">Category</label>
+    <input type="text"
+           class="form-control"
+           id="category"
+           formControlName="category"
+           placeholder="Enter category...">
+
+    <app-field-error-message [control]="formGroup.get('category')"></app-field-error-message>
+
+  </div>
+
+  <div class="form-group">
     <button type="submit"
             class="btn btn-outline-dark"
-            [disabled]="formGroup.invalid">
+            >
       {{!post.id ? 'Add' : 'Update'}}
     </button>
 
-    <a routerLink="/main/new-wonders"
+    <a routerLink="/main/all-posts"
        class="btn btn-default">Cancel</a>
   </div>
 </form>

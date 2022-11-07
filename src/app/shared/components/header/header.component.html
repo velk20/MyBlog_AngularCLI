@@ -1,25 +1,25 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Blog</a>
+  <a style="user-select: none" class="navbar-brand" type="button" (click)="onRedirect('main/home')">Blog</a>
 
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav">
 
       <ng-container *ngIf="!isLoggedUser()">
         <li class="nav-item">
-          <a type="button" class="nav-link" (click)="onRedirect('main/ancient-wonders')">Ancient Wonders</a>
+          <a style="user-select: none" type="button" class="nav-link" (click)="onRedirect('main/all-posts')">All posts</a>
         </li>
 
         <li class="nav-item">
-          <a type="button" class="nav-link" (click)="onRedirect('main/new-wonders')">Modern Wonders</a>
+          <a style="user-select: none" type="button" class="nav-link" (click)="onRedirect('main/my-posts')">My posts</a>
         </li>
       </ng-container>
 
       <li class="nav-item" *ngIf="isLoggedUser()">
-        <a type="button" class="nav-link" (click)="onRedirect('auth/login')">Login</a>
+        <a style="user-select: none" type="button" class="nav-link" (click)="onRedirect('auth/login')">Login</a>
       </li>
 
       <li class="nav-item" *ngIf="!isLoggedUser()">
-        <a type="button" class="nav-link" (click)="onLogout()">Logout</a>
+        <a style="user-select: none" type="button" class="nav-link" (click)="onLogout()">Logout</a>
       </li>
     </ul>
   </div>

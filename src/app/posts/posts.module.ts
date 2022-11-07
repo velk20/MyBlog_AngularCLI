@@ -12,6 +12,7 @@ import { PostReactiveFormComponent } from './components/post-forms/post-reactive
 import { PostTdFormComponent } from './components/post-forms/post-td-form/post-td-form.component';
 import { TableListComponent } from './components/table-list/table-list.component';
 import { TableViewComponent } from './components/table-view/table-view.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { TableViewComponent } from './components/table-view/table-view.component
     TableViewComponent,
     PostReactiveFormComponent,
     PostTdFormComponent,
-    MainComponent
+    MainComponent,
+    HomeComponent
   ]
 })
 export class PostsModule {

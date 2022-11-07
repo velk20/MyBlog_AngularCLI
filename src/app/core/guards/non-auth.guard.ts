@@ -15,7 +15,7 @@ export class NonAuthGuard implements CanLoad {
     const user = this.authService.getLoggedUser();
 
     if (user) {
-      this.router.navigate(['main/ancient-wonders']);
+      this.router.navigate(['main/my-posts']);
 
       return false;
     }

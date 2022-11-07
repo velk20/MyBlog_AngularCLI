@@ -3,6 +3,8 @@ import {Post} from '../../post.interface';
 import {PostsService} from '../../posts.service';
 import {Subject} from 'rxjs';
 import {map, takeUntil} from 'rxjs/operators';
+import {AuthService} from '../../../auth/auth.service';
+import {User} from '../../../auth/user.model';
 
 @Component({
   selector: 'app-table-list',
@@ -16,11 +18,11 @@ export class TableListComponent implements OnInit, OnDestroy {
 
   destroy$ = new Subject<boolean>();
 
-  constructor(private postsService: PostsService) {
+  constructor(private postsService: PostsService,
+              private authService: AuthService) {
     this.selectedPost = {
       title: '',
       content: '',
-      author: '',
       publishDate: '',
       category: ''
     };
@@ -49,7 +51,7 @@ export class TableListComponent implements OnInit, OnDestroy {
   private getContent(): void {
     this.postsService.getPosts().pipe(
       map((stream) => {
-        return stream.filter(x => x.category === 'ancient');
+        return stream.filter(x => x.authorId === this.getLoggedUser().id);
       }),
       takeUntil(this.destroy$)
     ).subscribe((response) => {
@@ -57,5 +59,9 @@ export class TableListComponent implements OnInit, OnDestroy {
     }, (error) => {
       console.log(error);
     });
+  }
+
+  getLoggedUser(): User {
+    return this.authService.getLoggedUser();
   }
 }
